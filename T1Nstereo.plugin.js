@@ -513,113 +513,113 @@ module.exports = (() => {
             const tin2 = thisObj
             const tin3 = thisObj.framerateReducer.sinkWants.qualityOverwrite
             const tintin = tin2.conn
-            if (this.settings.poopmode) {
+            if (this.settings.miscsettings.poopmode) {
               bitrate = 8000
             } else {
-              if (this.settings.nutballman === 0) {
+              if (this.settings.mainsettings.nutballman === 0) {
                 bitrate = 8000
               } //made by tinguy1 on github dont steal pussy
-              if (this.settings.nutballman === 1) {
+              if (this.settings.mainsettings.nutballman === 1) {
                 bitrate = 32000
               } //made by tinguy1 on github dont steal pussy
-              if (this.settings.nutballman === 2) {
+              if (this.settings.mainsettings.nutballman === 2) {
                 bitrate = 128000
               } //made by tinguy1 on github dont steal pussy
-              if (this.settings.nutballman === 3) {
+              if (this.settings.mainsettings.nutballman === 3) {
                 bitrate = 256000
               } //made by tinguy1 on github dont steal pussy
-              if (this.settings.nutballman === 4) {
+              if (this.settings.mainsettings.nutballman === 4) {
                 bitrate = 510000
               } //made by tinguy1 on github dont steal pussy
             }
-            if (this.settings.nutballman2 === 0) {
+            if (this.settings.mainsettings.nutballman2 === 0) {
               samplerate = 44100
             } //made by tinguy1 on github dont steal pussy
-            if (this.settings.nutballman2 === 1) {
+            if (this.settings.mainsettings.nutballman2 === 1) {
               samplerate = 48000
             } //made by tinguy1 on github dont steal pussy
-            if (this.settings.nutballman2 === 2) {
+            if (this.settings.mainsettings.nutballman2 === 2) {
               samplerate = 96000
             } //made by tinguy1 on github dont steal pussy
-            if (this.settings.nutballman2 === 3) {
+            if (this.settings.mainsettings.nutballman2 === 3) {
               samplerate = 192000
             } //made by tinguy1 on github dont steal pussy
-            if (this.settings.nutballman3 === 0) {
+            if (this.settings.mainsettings.nutballman3 === 0) {
               channelmaxbitrate = 7808000
             } //made by tinguy1 on github dont steal pussy
-            if (this.settings.nutballman3 === 1) {
+            if (this.settings.mainsettings.nutballman3 === 1) {
               channelmaxbitrate = 10000000
             } //made by tinguy1 on github dont steal pussy
-            if (this.settings.nutballman4 === 0) {
+            if (this.settings.mainsettings.nutballman4 === 0) {
               videobitrate = 1000000
             } //made by tinguy1 on github dont steal pussy
-            if (this.settings.nutballman4 === 1) {
+            if (this.settings.mainsettings.nutballman4 === 1) {
               videobitrate = 2000000
             } //made by tinguy1 on github dont steal pussy
-            if (this.settings.nutballman4 === 2) {
+            if (this.settings.mainsettings.nutballman4 === 2) {
               videobitrate = 3000000
             } //made by tinguy1 on github dont steal pussy
-            if (this.settings.nutballman4 === 3) {
+            if (this.settings.mainsettings.nutballman4 === 3) {
               videobitrate = 4000000
             } //made by tinguy1 on github dont steal pussy
-            if (this.settings.nutballman4 === 4) {
+            if (this.settings.mainsettings.nutballman4 === 4) {
               videobitrate = 5000000
             } //made by tinguy1 on github dont steal pussy
-            if (this.settings.nutballman5 === 0) {
+            if (this.settings.mainsettings.nutballman5 === 0) {
               streambitrate = 1000000
             } //made by tinguy1 on github dont steal pussy
-            if (this.settings.nutballman5 === 1) {
+            if (this.settings.mainsettings.nutballman5 === 1) {
               streambitrate = 2000000
             } //made by tinguy1 on github dont steal pussy
-            if (this.settings.nutballman5 === 2) {
+            if (this.settings.mainsettings.nutballman5 === 2) {
               streambitrate = 3000000
             } //made by tinguy1 on github dont steal pussy
-            if (this.settings.nutballman5 === 3) {
+            if (this.settings.mainsettings.nutballman5 === 3) {
               streambitrate = 4000000
             } //made by tinguy1 on github dont steal pussy
-            if (this.settings.nutballman5 === 4) {
+            if (this.settings.mainsettings.nutballman5 === 4) {
               streambitrate = 5000000
             } //made by tinguy1 on github dont steal pussy
-            if (this.settings.stereomono) {
+            if (this.settings.miscsettings.stereomono) {
               channelstereoornot = 2
             } else { //made by tinguy1 on github dont steal pussy
               channelstereoornot = 1
             } //made by tinguy1 on github dont steal pussy
-            if (this.settings.prioritygetaround) {
+            if (this.settings.miscsettings.prioritygetaround) {
               pbypass = 0
             } else {
               pbypass = 0.1
             } //made by tinguy1 on github dont steal pussy
-            if (this.settings.priorityaudio) {
+            if (this.settings.miscsettings.priorityaudio) {
               audiopriority = true
               audionormal = false
             } else {
               audionormal = true
               audiopriority = false
             } //made by tinguy1 on github dont steal pussy
-            if (this.settings.krispvad) {
+            if (this.settings.miscsettings.krispvad) {
               vadkrisp = false
             } else {
               vadkrisp = true
             } //made by tinguy1 on github dont steal pussy
-            if (this.settings.stereodecoder) {
+            if (this.settings.miscsettings.stereodecoder) {
               decoderstereo = 2
             } else {
               decoderstereo = 1
             } //made by tinguy1 on github dont steal pussy
-            if (this.settings.consolelog) {
+            if (this.settings.mainsettings.consolelog) {
               consolelogs = true
             } else {
               consolelogs = false
             }
-            if (this.settings.voiceattenuation) {
+            if (this.settings.miscsettings.voiceattenuation) {
              attenuation1 = 0
              attenuation2 = false
             } else {
               attenuation1 = 0.1
               attenuation2 = true
             }
-            vctoast = this.settings.vcjointoast
+            vctoast = this.settings.miscsettings.vcjointoast
             tintin.setTransportOptions = function (tin) {
               if (tin.audioEncoder) {
                 tin.audioEncoder.params = {
