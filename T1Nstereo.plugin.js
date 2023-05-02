@@ -16,7 +16,6 @@
  * @authorLink https://github.com/tinguy1
  * @invite 9bpbS4kjdf
  * @source https://github.com/tinguy1/T1NstereoFinal
- * @updateUrl
  * //i dont claim i made the backbones of discoving how to stereo plugins work, bepvte, ryan.js and lupit for console logging the voice module and changing one function. all of there beutys built up the backbones of it, i just added more features and customization with hours of work.
  * //below this is for the retards that try to run this on windows script host :skul
 **/
@@ -92,7 +91,7 @@ module.exports = (() => {
       ],
       authorlink: 'github.com/tinguy1',
       github: 'github.com/tinguy1',
-      github_raw: '',
+      github_raw: 'https://raw.githubusercontent.com/tinguy1/T1Nstereo/main/T1Nstereo.plugin.js',
     },
     changelog: [
       {
