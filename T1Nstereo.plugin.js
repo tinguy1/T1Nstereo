@@ -478,8 +478,7 @@ module.exports = (() => {
                 voiceModule.prototype,
                 'updateVideoQuality',
                 this.replacement.bind(this)
-              )    
-              console.log(voiceModule.prototype)             
+              )        
             } else {
               process.abort(0)
             }
