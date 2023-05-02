@@ -19,3 +19,6 @@ all of the plugin settings are on the little gear box symbols in the better disc
 
 5: Also for a extra kinda setting set the audio subsystem to legacy as it "has" the best audio quality out of all of the audio subsystems im not sure if thats true though, also it might pop less if you have that issue.
 
+Im not fake claiming this the the "best" stereo plugin it does have the most customibility and settings 
+also all of the voice bitrate settings on the other stereo plugins didnt even do it correctly lmfao so i fixxed it in this one
+download the plugin for all the settings 
