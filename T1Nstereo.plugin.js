@@ -10,7 +10,7 @@
      | $$   |   $$ \| $$  \$$$       \$$    $$  | $$   | $$     \| $$  | $$| $$     \ \$$    $$
       \$$    \$$$$$$ \$$   \$$        \$$$$$$    \$$    \$$$$$$$$ \$$   \$$ \$$$$$$$$  \$$$$$$ 
 
-      //best stereo on cord dont try to take the code i made and put your name on it cause if you do that i have a little something for you
+      //best stereo on cord dont try to take the code i made and put your name on it cause if you do that i have a little something for you or if someone magic comes out with a new stereo plugin that magically uses some of the same code from this one.
  * @name T1Nstereo
  * @author tinguy1 
  * @authorLink https://github.com/tinguy1
