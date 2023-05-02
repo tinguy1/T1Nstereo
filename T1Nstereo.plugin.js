@@ -82,7 +82,7 @@ module.exports = (() => {
       name: 'T1Nstereo', //dont try to change the name of the plugin trust me ;)
       version: '1.0.1',
       description:
-        'stereo plugin blah blah blah blah blah. disable echo cancellation, noise reduction, noise suppression, Diagnostic audio recording, and Debug logging for this plugin to work, open plugin settings to see configurable settings with some more utilitys also im very fucking sorry that the settings panel is very messy and confusing,every time i try to make it more neat with catagorys the config wont build correctly idk why',
+        'stereo plugin blah blah blah blah blah. disable echo cancellation, noise reduction, noise suppression, Diagnostic audio recording, and Debug logging for this plugin to work, open plugin settings to see configurable settings.',
       authors: [
         {
           name: 'tinguy1'
