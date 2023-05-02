@@ -1,6 +1,5 @@
 # T1Nstereo
-best stereo plugin for better discord
-YOU ALSO NEED TO DOWNLOAD THE CONFIG AND ALSO DRAG IT INTO YOUR BD FOLDER
+DOWNLOAD THE ZIP FILE UNZIP IT THEN DRAG THE CONTENTS OF THE FOLDER INTO THE BETTERDISCORD PLUGIN FOLDER
 join the support server through the plugin under the plugin name with the little question mark thingy if you need support or help
 all of the plugin settings are on the little gear box symbols in the better discord plugin page in settings
 
