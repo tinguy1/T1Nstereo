@@ -79,7 +79,7 @@ module.exports = (() => {
   const config = {
     info: {
       name: 'T1Nstereo', //dont try to change the name of the plugin or it wont work
-      version: '1.0.0',
+      version: '1.0.1',
       description:
         'disable echo cancellation, noise reduction, noise suppression, Diagnostic audio recording, and Debug logging for this plugin to work, open plugin settings to see configurable settings.',
       authors: [
