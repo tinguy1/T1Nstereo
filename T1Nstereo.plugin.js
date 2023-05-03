@@ -760,7 +760,7 @@ module.exports = (() => {
               if (this.settings.miscsettings.enableToasts) {
                 BdApi.showToast(
                   `T1Nstereo- ${vctoast}  `,
-                    {type: 'info'}
+                    {type: 'show'}
                 )
               } //made by tinguy1 on github dont steal pussy
             }
