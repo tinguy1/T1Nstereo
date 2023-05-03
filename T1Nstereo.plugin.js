@@ -10,8 +10,7 @@
      | $$   |   $$ \| $$  \$$$       \$$    $$  | $$   | $$     \| $$  | $$| $$     \ \$$    $$
       \$$    \$$$$$$ \$$   \$$        \$$$$$$    \$$    \$$$$$$$$ \$$   \$$ \$$$$$$$$  \$$$$$$ 
 
-      //best stereo on cord dont try to take the code i made and put your name on it cause if you do that i have a little something for you or if someone magic comes out with a new stereo plugin that magically uses some of the same code from this one.
-      //i dont claim i made the backbones of discoving how to stereo plugins work, bepvte, ryan.js and lupit for console logging the voice module and changing one function. all of there beutys built up the backbones of it, i just added more features and customization with hours of work.
+      //best stereo on cord 
  * @name T1Nstereo
  * @author tinguy1 
  * @authorLink https://github.com/tinguy1
