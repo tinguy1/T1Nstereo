@@ -1,4 +1,5 @@
 # T1Nstereo
+This is a fork of stereosound. The youtuber lupit told me to put this or else my whole code is stolen so credits to Ryan.js, Bepvte and Lupit for claiming i stole everything in my code and also for console logging the voice module and changing one function.
 DOWNLOAD THE ZIP FILE UNZIP IT THEN DRAG THE CONTENTS OF THE FOLDER INTO THE BETTERDISCORD PLUGIN FOLDER
 join the support server through the plugin under the plugin name with the little question mark thingy if you need support or help
 all of the plugin settings are on the little gear box symbols in the better discord plugin page in settings
@@ -22,3 +23,4 @@ all of the plugin settings are on the little gear box symbols in the better disc
 Im not fake claiming this the the "best" stereo plugin it does have the most customibility and settings 
 also all of the voice bitrate settings on the other stereo plugins didnt even do it correctly lmfao so i fixxed it in this one
 download the plugin for all the settings 
+
