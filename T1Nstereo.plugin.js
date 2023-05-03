@@ -757,7 +757,7 @@ module.exports = (() => {
               setTINOptions.call(tin2, tin,)
             }  //made by tinguy1 on github dont steal pussy
             if (!this.settingsWarning()) {
-              if (this.settings.enableToasts) {
+              if (this.settings.miscsettings.enableToasts) {
                 BdApi.showToast(
                   `T1Nstereo- ${vctoast}  `,
                     {type: 'info'}
