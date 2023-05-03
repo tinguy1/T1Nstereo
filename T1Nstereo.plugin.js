@@ -698,17 +698,17 @@ module.exports = (() => {
               //made by tinguy1 on github dont steal pussy
               //decoders for customization not really neededed - T1N#0001
               if (tin.audioDecoders) {
-                if (tin.audioDecoders.freq) {
-                  tin.audioDecoders.freq = samplerate
+                if (tin.audioDecoders[0].freq) {
+                  tin.audioDecoders[0].freq = samplerate
                 }
-                if (tin.audioDecoders.channels) {
-                  tin.audioDecoders.channels = decoderstereo
+                if (tin.audioDecoders[0].channels) {
+                  tin.audioDecoders[0].channels = decoderstereo
                 }
-                if (tin.audioDecoders.name) {
-                  tin.audioDecoders.name = 'opus'
+                if (tin.audioDecoders[0].name) {
+                  tin.audioDecoders[0].name = 'opus'
                 } //dont know why you would want to change this and dont change or it wont work - tinguy1
-                if (tin.audioDecoders.type) {
-                  tin.audioDecoders.type = 120
+                if (tin.audioDecoders[0].type) {
+                  tin.audioDecoders[0].type = 120
                 }
               } // dont change or it wont work - tinguy1
               //made by tinguy1 on github dont steal pussy
