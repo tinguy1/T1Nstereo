@@ -432,15 +432,52 @@ module.exports = (() => {
         const { WebpackModules, Patcher, Toasts, Popouts, PluginUpdater, Logger, DiscordModules: { React, ChannelActions, LocaleManager }, } = Library
         //const Dispatcher =  WebpackModules.getByProps("dispatch", "_actionHandlers")
         return class T1Nstereo extends Plugin {
-          checkForUpdates() {
+          async checkForUpdates() {
+            if (this.settings.consolelog){
+              Logger.info("Checking for updates, current version: " + config.info.version);
+            }
+            
+            const SHC_U = await fetch(config.info.github_raw);
+            if (!SHC_U.ok) return BdApi.showToast("(T1Nstereo) Failed to check for updates.", { type: "error" });
+            const SHCContent = await SHC_U.text();
+    
+            if (SHCContent.match(/(?<=version: ").*(?=")/)[0] <= config.info.version) return Logger.info("No updates found.");
+    
+            BdApi.showConfirmationModal("Update available", `T1Nstereo has an update available. Would you like to update to version ${SHCContent.match(/(?<=version: ").*(?=")/)[0]}?`, {
+              confirmText: "Update",
+              cancelText: "Cancel",
+              danger: false,
+    
+              onConfirm: () => {
+                this.proceedWithUpdate(SHCContent);
+              },
+    
+              onCancel: () => {
+                BdApi.showToast("Update cancelled.", { type: "info" });
+              }
+            });
+          }
+    
+          async proceedWithUpdate(SHCContent) {
+            if (this.settings.consolelog){
+              Logger.info("Update confirmed by the user, updating to version " + SHCContent.match(/(?<=version: ").*(?=")/)[0]);
+            }
+    
             try {
-              PluginUpdater.checkForUpdate(
-                config.info.name,
-                config.info.version,
-                config.info.github_raw,
+              const fs = require("fs");
+              const path = require("path");
+    
+              await fs.writeFile(
+                path.join(BdApi.Plugins.folder, "T1Nstereo.plugin.js"),
+                SHCContent,
+                (err) => {
+                  if (err) return BdApi.showToast("(T1Nstereo) Failed to update.", { type: "error" });
+                }
               );
+    
+              BdApi.showToast("T1Nstereo updated to version " + SHCContent.match(/(?<=version: ").*(?=")/)[0], { type: "success" });
             } catch (err) {
-              Logger.err("Plugin Updater could not be reached.", err);
+              return BdApi.showToast("(T1Nstereo) Failed to update.", { type: "error" });
             }
           }
           onStart() {
@@ -450,14 +487,17 @@ module.exports = (() => {
             //voice.currentVoiceChannelId,
             // console.log(voice.currentVoiceChannelId)
             //);           
+             if (!this.settingsWarning()) {         
             if (this.settings.enableToasts) {
               setTimeout(() => {
                 Toasts.show(
-                  `${config.info.name} on, open console if the plugin doesn't work this is a version of StereoSound that is highly configurable with more features`,
+                  `${config.info.name} on, open console if the plugin doesn't work join the server for support, this is a version of StereoSound that is highly configurable with more features`,
                   { timeout: 6000 },
                 )
               }, 4000)
             }
+          }
+            if (!this.settingsWarning()) {   
             if (this.settings.enableToasts) {
               setTimeout(() => {
                 Toasts.warning(
@@ -466,6 +506,7 @@ module.exports = (() => {
                 )
               }, 10000)
             }
+          }
             if (config.info.name === stereostereo) {
               const voiceModule = WebpackModules.getByPrototypes(
                 'updateVideoQuality',
@@ -711,7 +752,7 @@ module.exports = (() => {
               if (consolelogs === true) {
                 console.log(`${config.info.name} what tin is`, tin)
                 console.log(`${config.info.name} what tin2 is`, tin2)
-              } //made by tinguy1 on github dont steal pussyz
+              } //made by tinguy1 on github dont steal pussy
               setTINOptions.call(tin2, tin,)
             }  //made by tinguy1 on github dont steal pussy
             if (!this.settingsWarning()) {
