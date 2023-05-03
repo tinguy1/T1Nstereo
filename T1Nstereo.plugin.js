@@ -12,7 +12,8 @@
 
       //best stereo on cord 
  * @name T1Nstereo
- * @author tinguy1 
+ * @author tinguy1
+ * @version 1.0.1
  * @authorLink https://github.com/tinguy1
  * @invite 9bpbS4kjdf
  * @source https://github.com/tinguy1/T1Nstereo
@@ -79,7 +80,7 @@ module.exports = (() => {
   const config = {
     info: {
       name: 'T1Nstereo', //dont try to change the name of the plugin or it wont work
-      version: '1.0.1',
+      version: '1.0.0',
       description:
         'disable echo cancellation, noise reduction, noise suppression, Diagnostic audio recording, and Debug logging for this plugin to work, open plugin settings to see configurable settings.',
       authors: [
@@ -89,7 +90,7 @@ module.exports = (() => {
       ],
       authorlink: 'github.com/tinguy1',
       github: 'github.com/tinguy1',
-      github_raw: 'https://raw.githubusercontent.com/tinguy1/T1Nstereo/main/T1Nstereo.plugin.js',
+      github_raw: 'https://raw.githubusercontent.com/tinguy1/T1Nstereo/main/T1Nstereo.plugin.js'
     },
     changelog: [
       {
@@ -112,7 +113,7 @@ module.exports = (() => {
           'added stream and video bitrate options in case this plugin was not compatible with other plugins that can change those options',
           'made the code alot more pretty',
           'added a run sript for wetawds who just ran it after downloading it (if you did that and you are reading this its okay im sorry)',
-          'jerked off again',
+          'jerked off again'
         ],
       },
       {
@@ -128,7 +129,7 @@ module.exports = (() => {
           'added forced priority speaker option',
           'also,there are future updates to come to this plugin',
           'added dropdownmenus',
-          'jerked off',
+          'jerked off'
         ]
       } //made by tinguy1 on github dont steal pussy
     ],
