@@ -496,12 +496,7 @@ module.exports = (() => {
                   `Please disable echo cancellation, noise reduction, noise suppression, Diagnostic audio recording, and Debug logging for ${config.info.name}`,
                   { type: 'warning', timeout: 6000 }
                 )
-              }
-              //const voiceSettings = WebpackModules.getByProps("setNoiseSuppression");
-              //voiceSettings.setNoiseSuppression(false, {});
-              //voiceSettings.setEchoCancellation(false, {});
-              //voiceSettings.setNoiseCancellation(false, {});
-              //the green code above this is turned off as i cant figure out what discords dropdown menu values are or how to change them this way as i dont know the values or if the function this way can even work
+              }              
               return true
             } else {
               return false
