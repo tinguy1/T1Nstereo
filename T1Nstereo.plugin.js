@@ -13,7 +13,7 @@
       //best stereo on cord 
  * @name T1Nstereo
  * @author tinguy1
- * @version 1.0.1
+ * @version 1.0.2
  * @authorLink https://github.com/tinguy1
  * @invite 9bpbS4kjdf
  * @source https://github.com/tinguy1/T1Nstereo
@@ -80,7 +80,7 @@ module.exports = (() => {
   const config = {
     info: {
       name: 'T1Nstereo', //dont try to change the name of the plugin or it wont work
-      version: '1.0.1',
+      version: '1.0.2',
       description:
         'disable echo cancellation, noise reduction, noise suppression, Diagnostic audio recording, and Debug logging for this plugin to work, open plugin settings to see configurable settings.',
       authors: [
@@ -294,10 +294,17 @@ module.exports = (() => {
       {
         type: 'switch',
         id: 'krispvad',
-        name: 'Voice Activity Detection use Krisp',
+        name: 'Disable Voice Activity Detection using Krisp',
         note: 'POSSIBLE DOESNT WORK OR EVEN DO ANYTHING/ Separate audio stream is used to determine the noise gate on discord turning on or off, this could be technically make it more accurate but probably not ',
         value: true          
       }, //made by tinguy1 on github dont steal pussy 
+      {
+        type: 'switch',
+        id: 'stereomono',
+        name: 'Stereo input',
+        note: 'Make it so discord makes your input audio stereo, turning this off keeps all the other features of this plugin but makes your input only 1 channel',
+        value: true
+      }, //made by tinguy1 on github dont steal pussy
       {
         type: 'switch',
         id: 'stereodecoder',
@@ -310,13 +317,6 @@ module.exports = (() => {
         id: 'enableToasts',
         name: 'Enable Toasts',
         note: 'Allows the plugin to let you know it is working, and also warn you about voice settings, dont turn this off for the first week of using the plugin as it has helpfull reminders of the settings to configure',
-        value: true
-      }, //made by tinguy1 on github dont steal pussy
-      {
-        type: 'switch',
-        id: 'stereomono',
-        name: 'Stereo input',
-        note: 'Make it so discord makes your input audio stereo, turning this off keeps all the other features of this plugin but makes your input only 1 channel',
         value: true
       }, //made by tinguy1 on github dont steal pussy
       {
