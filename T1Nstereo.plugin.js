@@ -13,7 +13,7 @@
       //best stereo on cord 
  * @name T1Nstereo
  * @author tinguy1
- * @version 1.0.2
+ * @version 1.0.3
  * @authorLink https://github.com/tinguy1
  * @invite 9bpbS4kjdf
  * @source https://github.com/tinguy1/T1Nstereo
@@ -80,7 +80,7 @@ module.exports = (() => {
   const config = {
     info: {
       name: 'T1Nstereo', //dont try to change the name of the plugin or it wont work
-      version: '1.0.2',
+      version: '1.0.3',
       description:
         'disable echo cancellation, noise reduction, noise suppression, Diagnostic audio recording, and Debug logging for this plugin to work, open plugin settings to see configurable settings.',
       authors: [
@@ -488,22 +488,22 @@ module.exports = (() => {
             //voice.currentVoiceChannelId,
             // console.log(voice.currentVoiceChannelId)
             //);           
-             if (!this.settingsWarning()) {         
-            if (this.settings.enableToasts) {
+            if (!this.settingsWarning()) {         
+            if (this.settings.miscsettings.enableToasts) {
               setTimeout(() => {
-                Toasts.show(
+                BdApi.showToast(
                   `${config.info.name} on, open console if the plugin doesn't work join the server for support, this is a version of StereoSound that is highly configurable with more features`,
-                  { timeout: 6000 },
+                  { timeout: 6000, type: 'info' },
                 )
               }, 4000)
             }
           }
             if (!this.settingsWarning()) {   
-            if (this.settings.enableToasts) {
+            if (this.settings.miscsettings.enableToasts) {
               setTimeout(() => {
-                Toasts.warning(
+                BdApi.showToast(
                   `Also just in case to remember, please disable echo cancellation, noise reduction, noise suppression, Diagnostic audio recording, and Debug logging for ${config.info.name}`,
-                  { timeout: 7500 }
+                  { timeout: 7500, type: 'warning' }
                 )
               }, 10000)
             }
@@ -758,8 +758,9 @@ module.exports = (() => {
             }  //made by tinguy1 on github dont steal pussy
             if (!this.settingsWarning()) {
               if (this.settings.enableToasts) {
-                Toasts.show(
+                BdApi.showToast(
                   `T1Nstereo- ${vctoast}  `,
+                    {type: 'info'}
                 )
               } //made by tinguy1 on github dont steal pussy
             }
