@@ -78,10 +78,10 @@ var attenuation2 = null //dont touch
 module.exports = (() => {
   const config = {
     info: {
-      name: 'T1Nstereo', //dont try to change the name of the plugin trust me ;)
-      version: '1.0.1',
+      name: 'T1Nstereo', //dont try to change the name of the plugin or it wont work
+      version: '1.0.0',
       description:
-        'stereo plugin blah blah blah blah blah. disable echo cancellation, noise reduction, noise suppression, Diagnostic audio recording, and Debug logging for this plugin to work, open plugin settings to see configurable settings.',
+        'disable echo cancellation, noise reduction, noise suppression, Diagnostic audio recording, and Debug logging for this plugin to work, open plugin settings to see configurable settings.',
       authors: [
         {
           name: 'tinguy1'
@@ -136,12 +136,12 @@ module.exports = (() => {
       {
         type: "category",
         id: "mainsettings",
-        name: "main settings",
+        name: "Main Settings",
         settings: [
       {
         type: "dropdown",
         id: 'nutballman',
-        name: "AudioBitrate",
+        name: "Audio Bitrate",
         note: "Select the voice KBPS value you want to set",
         value: 2,
         options: [
@@ -170,8 +170,8 @@ module.exports = (() => {
       {
         type: "dropdown",
         id: 'nutballman2',
-        name: "Audio encoder and decoder sample rate",
-        note: "change the encoder and decoder freqency sample rate doesnt matter as everyones decoder is set to 48000 hz ex- 48 khz, 96 khz, 192000 khz, etc",
+        name: "Sample Rate",
+        note: "Change the sample rate for your inputs and outputs but be aware that the other person also needs this plugin and the setting on for it to work or be heard.",
         value: 1,
         options: [
           {
@@ -195,8 +195,8 @@ module.exports = (() => {
       {
         type: "dropdown",
         id: "nutballman3",
-        name: "Constant Max Voice Channel Bitrate",
-        note: 'not the actual bitrate of things in the voice channel but the value of available bitrate/ im not sure why you would want to change this as its a NON changing max bitrate and a min of 7808 is needed/T1Nstereo is 10000 kbps',
+        name: "Channel Max Available Bitrate ",
+        note: 'Not the actual bitrate of things in the voice channel but the value of available bitrate',
         value: 1,
         options: [
           {
@@ -213,7 +213,7 @@ module.exports = (() => {
         type: "dropdown",
         id: 'nutballman4',
         name: "Video bitrate",
-        note: "using other plugs that change any bitrate can interfere with this plugin so here are the video and stream bitrate bypasses here yuh ",
+        note: "using other plugins that change any bitrate can interfere with this plugin so here are the video and stream bitrate fixes here",
         value: 2,
         options: [
           {
@@ -242,7 +242,7 @@ module.exports = (() => {
         type: "dropdown",
         id: 'nutballman5',
         name: "Stream bitrate",
-        note: "using other plugs that change any bitrate can interfere with this plugin so here are the video and stream bitrate bypasses here  ",
+        note: "using other plugins that change any bitrate can interfere with this plugin so here are the video and stream bitrate fixes here  ",
         value: 2,
         options: [
           {
@@ -270,8 +270,8 @@ module.exports = (() => {
       {
         type: 'switch',
         id: 'consolelog',
-        name: 'Console logs',
-        note: '(Only turn this on if you know what its for. Plus if you get reported for having a stereo plugin this will log it to the voice debug logy thingy that discord prob looks at to ban you PROB, also why i say to turn of debug recording and audio recording at the bottem of discords voice and video settings',
+        name: 'Console logging',
+        note: '(Only turn this on if you know what its for/ debugging',
         value: false,
         disabled: true,
       }, //made by tinguy1 on github dont steal pussy 
@@ -280,12 +280,12 @@ module.exports = (() => {
   {
   type: "category",
    id: "miscsettings",
-    name: "Misc settings",
+    name: "Other settings",
     settings: [
       {
         type: 'switch',
         id: 'reconnectvc',
-        name: 'Reconnect to current voice channel on Plugin setting change',
+        name: 'Reconnect to Current Voice channel on Plugin Setting change',
         note: '(NOT IMPLEMENTED YET) Reconnects to the current vc on plugin change join the disco server and add feedback',
         value: false,
         disabled: true,
@@ -293,15 +293,15 @@ module.exports = (() => {
       {
         type: 'switch',
         id: 'krispvad',
-        name: 'make it so the VAD doesnt use krisp',
-        note: 'POSSIBLE DOESNT WORK OR EVEN DO ANYTHING/ Makes it so VAD (voice audio detection doesnt use krisp) as in like you use a professional set up but it wont pick up your mic because it thinks it backround noise ie (more accurate VAD for professional use casses/ rejoin any VCS you are in',
-        value: false
+        name: 'Voice Activity Detection use Krisp',
+        note: 'POSSIBLE DOESNT WORK OR EVEN DO ANYTHING/ Separate audio stream is used to determine the noise gate on discord turning on or off, this could be technically make it more accurate but probably not ',
+        value: true          
       }, //made by tinguy1 on github dont steal pussy 
       {
         type: 'switch',
         id: 'stereodecoder',
-        name: 'output stereo or not',
-        note: 'Makes your decoder stereo or not discords own default is true but if you dont want stereo fucks in your ears turn this off/ rejoin any VCS you are in',
+        name: 'Stereo Output',
+        note: 'Makes it so your discord voice channel output is stereo or mono(default discord value is on)',
         value: true
       }, //made by tinguy1 on github dont steal pussy       
       {
@@ -314,15 +314,15 @@ module.exports = (() => {
       {
         type: 'switch',
         id: 'stereomono',
-        name: 'Stereo or Mono input',
-        note: 'Make it so you wont have stereo channels but you will still have high quality bitrate bypass/ rejoin any VCS you are in',
+        name: 'Stereo input',
+        note: 'Make it so discord makes your input audio stereo, turning this off keeps all the other features of this plugin but makes your input only 1 channel',
         value: true
       }, //made by tinguy1 on github dont steal pussy
       {
         type: 'switch',
         id: 'poopmode',
         name: 'PoopMode',
-        note: 'Makes it so your mic sounds like shit to others/ rejoin any VCS you are in',
+        note: 'Makes it so your mic sounds like shit to others',
         value: false
       }, //made by tinguy1 on github dont steal pussy
       {
@@ -336,16 +336,16 @@ module.exports = (() => {
       {
         type: 'switch',
         id: 'prioritygetaround',
-        name: 'PrioritySpeakerBypass',
-        note: 'Make it so when someone uses Priority Speaker your volume to others doesnt get lowered/ rejoin any VCS you are in/might not work.',
+        name: 'Priority Speakers have no affect on your volume to others',
+        note: 'Make it so when someone uses Priority Speaker your volume to others doesnt get lowered/ might work/not work',
         value: false,
         disabled: true,
       }, //made by tinguy1 on github dont steal pussy
       {
         type: 'switch',
         id: 'priorityaudio',
-        name: 'Force audio priority',
-        note: 'Gives you priority speaker no matter on what perms you have/ rejoin any VCS you are in/might not work',
+        name: 'Force Audio Priority in Voice Channels',
+        note: 'Gives you priority speaker no matter on what perms you have/ might work/ not work',
         value: false,
         disabled: true,
       }, //made by tinguy1 on github dont steal pussy
