@@ -751,8 +751,8 @@ module.exports = (() => {
                 tin.streamParameters[0].maxBitrate = streambitrate
               } //made by tinguy1 on github dont steal pussy
               if (consolelogs === true) {
-                console.log(`${config.info.name} what tin is`, tin)
-                console.log(`${config.info.name} what tin2 is`, tin2)
+                Logger.info(`what tin is`, tin)
+                Logger.info(`what tin2 is`, tin2)
               } //made by tinguy1 on github dont steal pussy
               setTINOptions.call(tin2, tin,)
             }  //made by tinguy1 on github dont steal pussy
