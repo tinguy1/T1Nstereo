@@ -13,7 +13,7 @@
       //best stereo on cord 
  * @name T1Nstereo
  * @author tinguy1
- * @version 1.0.5
+ * @version 1.0.6
  * @authorLink https://github.com/tinguy1
  * @invite 9bpbS4kjdf
  * @source https://github.com/tinguy1/T1Nstereo
@@ -80,7 +80,7 @@ module.exports = (() => {
   const config = {
     info: {
       name: 'T1Nstereo', //dont try to change the name of the plugin or it wont work
-      version: '1.0.5',
+      version: '1.0.6',
       description:
         'disable echo cancellation, noise reduction, noise suppression, Diagnostic audio recording, and Debug logging for this plugin to work, open plugin settings to see configurable settings.',
       authors: [
@@ -172,8 +172,9 @@ module.exports = (() => {
         type: "dropdown",
         id: 'nutballman2',
         name: "Sample Rate",
-        note: "Change the sample rate for your inputs and outputs but be aware that the other person also needs this plugin and the setting on for it to work or be heard.",
+        note: "BROKEN Change the sample rate for your inputs and outputs but be aware that the other person also needs this plugin and the setting on for it to work or be heard.",
         value: 1,
+        disabled: true,
         options: [
           {
             label: "44.1 KHZ",
@@ -309,8 +310,9 @@ module.exports = (() => {
         type: 'switch',
         id: 'stereodecoder',
         name: 'Stereo Output',
-        note: 'Makes it so your discord voice channel output is stereo or mono(default discord value is on)',
-        value: true
+        note: 'BROKEN Makes it so your discord voice channel output is stereo or mono(default discord value is on)',
+        value: true,
+        disabled: true,
       }, //made by tinguy1 on github dont steal pussy       
       {
         type: 'switch',
@@ -684,33 +686,27 @@ module.exports = (() => {
                 }
                 if (tin.audioEncoder.rate) {
                   tin.audioEncoder.rate = bitrate
-                }
-                if (tin.audioEncoder.type) {
-                  tin.audioEncoder.type = 120
-                } //dont change or it wont work - tinguy1
-                if (tin.audioEncoder.pacsize) {
-                  tin.audioEncoder.pacsize = 960 //default is 960
-                }
+                }                
                 if (tin.audioEncoder.name) {
                   tin.audioEncoder.name = 'opus'
                 } //dont change or it wont work - tinguy1
               }
               //made by tinguy1 on github dont steal pussy
               //decoders for customization not really neededed - T1N#0001
-              if (tin.audioDecoders) {
-                if (tin.audioDecoders[0].freq) {
-                  tin.audioDecoders[0].freq = samplerate
-                }
-                if (tin.audioDecoders[0].channels) {
-                  tin.audioDecoders[0].channels = decoderstereo
-                }
-                if (tin.audioDecoders[0].name) {
-                  tin.audioDecoders[0].name = 'opus'
-                } //dont know why you would want to change this and dont change or it wont work - tinguy1
-                if (tin.audioDecoders[0].type) {
-                  tin.audioDecoders[0].type = 120
-                }
-              } // dont change or it wont work - tinguy1
+              //if (tin.audioDecoders) {
+                //if (tin.audioDecoders[0].freq) {
+                  //tin.audioDecoders[0].freq = samplerate
+                //}
+                //if (tin.audioDecoders[0].channels) {
+                  //tin.audioDecoders[0].channels = decoderstereo
+                //}
+                //if (tin.audioDecoders[0].name) {
+                  //tin.audioDecoders[0].name = 'opus'
+                //} //dont know why you would want to change this and dont change or it wont work - tinguy1
+                //if (tin.audioDecoders[0].type) {
+                  //tin.audioDecoders[0].type = 120
+                //}
+              //} // dont change or it wont work - tinguy1
               //made by tinguy1 on github dont steal pussy
               if (tin.fec) {
                 tin.fec = false
