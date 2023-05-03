@@ -2,7 +2,7 @@
 This is a fork of stereosound. The youtuber lupit told me to put this or else my whole code is stolen so credits to Ryan.js, Bepvte and Lupit for claiming i stole everything in my code and also for console logging the voice module and changing one function.
 
 
-DOWNLOAD THE ZIP FILE UNZIP IT THEN DRAG THE CONTENTS OF THE FOLDER INTO THE BETTERDISCORD PLUGIN FOLDER
+download the .plugin.js file then drag it into discord and ctrl r then after clicking out of the changelog menu ctrl r again to get the prompt to download zeres
 
 join the support server through the plugin under the plugin name with the little question mark thingy if you need support or help
 
