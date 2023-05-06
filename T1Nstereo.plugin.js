@@ -171,7 +171,7 @@ module.exports = (() => {
       {
         type: "dropdown",
         id: 'nutballman2',
-        name: "Sample Rate",
+        name: "Sample Rate (Broken)",
         note: "BROKEN Change the sample rate for your inputs and outputs but be aware that the other person also needs this plugin and the setting on for it to work or be heard.",
         value: 1,
         disabled: true,
