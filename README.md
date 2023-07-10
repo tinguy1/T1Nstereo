@@ -1,4 +1,7 @@
 # T1Nstereo
+V2 IS OUT!!!!!!!!!!
+
+
 This is a fork of stereosound. The youtuber lupit told me to put this or else my whole code is stolen so credits to Ryan.js, Bepvte and Lupit for claiming i stole everything in my code and also for console logging the voice module and changing one function.
 
 
